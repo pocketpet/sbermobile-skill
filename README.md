@@ -16,7 +16,7 @@ Python-клиент и набор AI-skills для личного кабинет
 ## Установка
 
 ```bash
-git clone https://github.com/example/sbermobile-skill.git
+git clone https://github.com/pocketpet/sbermobile-skill.git
 cd sbermobile-skill
 pip install -r requirements.txt
 ```
