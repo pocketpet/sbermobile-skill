@@ -55,7 +55,7 @@ PRECHECK_CHAINS = {
 
 SKILL_GROUPS = {
     "core": [
-        "account.get_balance", "account.get_remainders", "account.get_profile",
+        "account.get_balance", "account.get_remainders",
         "tariff.get_current", "services.list_current",
     ],
     "tariff": [

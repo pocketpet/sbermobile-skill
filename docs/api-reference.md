@@ -30,14 +30,6 @@
 
 ## Эндпоинты
 
-### client-service — Профиль
-| Метод | URL | Описание |
-|-------|-----|----------|
-| GET | `/client-service/customer-profile` | Профиль абонента |
-| GET | `/client-service/customer-profile?additionalNumber={n}` | Профиль доп. номера |
-| GET | `/client-service/personal-info` | Персональные данные |
-| GET | `/client-service/contract` | Данные контракта |
-
 ### tariff-service — Тарифы и опции
 | Метод | URL | Описание |
 |-------|-----|----------|
@@ -92,7 +84,6 @@
 ### user-detail-service — Пользователь
 | Метод | URL | Описание |
 |-------|-----|----------|
-| GET | `/user-detail-service/elk/userinfo` | Инфо пользователя (ЕЛК) |
 | GET | `/user-detail-service/sber/sdk/params` | Параметры SberID SDK |
 | POST | `/user-detail-service/sber/v2/auth/login` | Авторизация SberID |
 | POST | `/user-detail-service/messenger/open_chat` | Открыть чат |
@@ -145,8 +136,6 @@
 |-------|----------|-----------|
 | POST | `/gateway/send_password` | OK — SMS отправляется |
 | POST | `/gateway/login` | OK — токен получен |
-| GET | `/client-service/customer-profile` | OK — ФИО, SIM, статус |
-| GET | `/client-service/personal-info` | OK — паспорт, адрес, договор |
 | GET | `/tariff-service/tariff/v2/connected-available` | OK — тариф + опции |
 | GET | `/tariff-service/tariff/data` | OK — тариф, остатки, баланс |
 | GET | `/tariff-service/v2/options/connected` | OK — подключённые услуги |
@@ -156,7 +145,6 @@
 | GET | `/payment-service/card` | OK — привязанные карты |
 | GET | `/payment-service/v3/auto-pay` | OK — автоплатёж (пустой) |
 | GET | `/campaign-service/campaign/content/v2` | OK — промо-кампании |
-| GET | `/user-detail-service/elk/userinfo` | OK (требует токен) |
 | GET | `/user-detail-service/stories` | OK — сторис, MNP, ассистент |
 | GET | `/feedback-service/tickets` | OK — пустой список |
 | GET | `/friends-and-family-service/v1/group` | OK |
@@ -169,7 +157,6 @@
 | GET | `/tariff-service/v1/secure-account/assistant/personages` |
 | GET | `/tariff-service/v2/secure-account/secure-info` |
 | GET | `/tariff-service/v2/secure-account/banner` |
-| GET | `/client-service/contract` |
 | GET | `/feedback-service/faq-buttons` |
 | GET | `/payment-service/v3/auto-pay/services` |
 | GET | `/user-detail-service/sber/sdk/params` |

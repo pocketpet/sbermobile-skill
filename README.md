@@ -60,9 +60,6 @@ c.get_recommended_amount()
 # Бонусы СберСпасибо
 c.get_loyalty_state()
 
-# Профиль абонента (ФИО, SIM-тип, статус)
-c.get_customer_profile()
-
 # Промо-акции и персональные предложения
 c.get_campaign_content()
 
@@ -74,13 +71,12 @@ c.get_selfreg_showcase()
 
 ## AI Skills
 
-7 read-only skills для использования с Claude или другими LLM:
+6 read-only skills для использования с Claude или другими LLM:
 
 | Skill | Описание |
 |-------|----------|
 | `account.get_balance` | Рекомендуемое пополнение, автоплатёж, бонусы СберСпасибо |
 | `account.get_remainders` | Остатки пакетов: ГБ, минуты, SMS |
-| `account.get_profile` | Профиль абонента, персональные данные |
 | `tariff.get_current` | Текущий тариф + доступные для перехода |
 | `tariff.list_available` | Витрина тарифов, пакеты услуг |
 | `services.list_current` | Подключённые опции и услуги |
@@ -104,7 +100,7 @@ sbermobile-skill/
 │   └── sbermobile_client.py    # REST-клиент (read-only)
 ├── skills/
 │   ├── base.py                 # Базовый класс Skill
-│   ├── account/                # get_balance, get_remainders, get_profile
+│   ├── account/                # get_balance, get_remainders
 │   ├── tariff/                 # get_current, list_available
 │   └── services/               # list_current, get_campaigns
 ├── examples/

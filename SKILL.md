@@ -31,8 +31,6 @@ c.submit_otp('+79XXXXXXXXX', '<код>')
 
 ### Основные вызовы
 ```python
-c.get_customer_profile()              # ФИО, SIM-тип, статус
-c.get_personal_info()                 # Адрес, паспорт, договор
 c.get_tariff_data('9XXXXXXXXX')       # Тариф + остатки (ГБ, мин, SMS)
 c.get_tariff_connected_available()    # Текущий тариф + доступные опции
 c.get_recommended_amount()            # Рекомендуемое пополнение

@@ -203,29 +203,6 @@ class SberMobileClient:
         except (FileNotFoundError, json.JSONDecodeError, KeyError):
             return False
 
-    # ── Client Service (Profile) ────────────────────────────
-
-    def get_customer_profile(self, additional_number: str = None) -> dict:
-        """Профиль абонента."""
-        params = {}
-        if additional_number:
-            params["additionalNumber"] = additional_number
-        return self._get("/client-service/customer-profile", params)
-
-    def get_personal_info(self, additional_number: str = None) -> dict:
-        """Персональные данные абонента."""
-        params = {}
-        if additional_number:
-            params["additionalNumber"] = additional_number
-        return self._get("/client-service/personal-info", params)
-
-    def get_contract(self, additional_number: str = None) -> dict:
-        """Данные контракта."""
-        params = {}
-        if additional_number:
-            params["additionalNumber"] = additional_number
-        return self._get("/client-service/contract", params)
-
     # ── Tariff Service ──────────────────────────────────────
 
     def get_tariff_connected_available(self, additional_number: str = "") -> dict:
@@ -339,10 +316,6 @@ class SberMobileClient:
         return self._get("/friends-and-family-service/v1/invitations/price")
 
     # ── User Detail Service ─────────────────────────────────
-
-    def get_userinfo(self) -> dict:
-        """Информация о пользователе (ЕЛК)."""
-        return self._get("/user-detail-service/elk/userinfo")
 
     def get_sber_sdk_params(self) -> dict:
         """Параметры SberID SDK."""
